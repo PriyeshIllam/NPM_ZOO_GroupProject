@@ -1,0 +1,25 @@
+{
+  "name": "npm_zoo_groupproject",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Zoo project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PriyeshIllam/NPM_ZOO_GroupProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PriyeshIllam/NPM_ZOO_GroupProject/issues"
+  },
+  "homepage": "https://github.com/PriyeshIllam/NPM_ZOO_GroupProject#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}
