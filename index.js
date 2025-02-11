@@ -4,4 +4,5 @@ import express from 'express';
  app.get("/",(req,res) => {
     res.send("Zoo Assignment")
  })
+
  app.listen(PORT, () => console.log(`Listening on port : ${PORT}`));
