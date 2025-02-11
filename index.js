@@ -1,12 +1,12 @@
 import express from 'express';
 import mammalsRouter from './routes/mammalsRouter.js';
- const PORT = 3001;
+const PORT = 3001;
  
- const app = express ();
- app.get("/",(req,res) => {
+const app = express ();
+app.get("/",(req,res) => {
     res.send("Zoo Assignment")
- })
+})
 
- app.use("/mammals", mammalsRouter)
+app.use("/mammals", mammalsRouter)
 
- app.listen(PORT, () => console.log(`Listening on port : ${PORT}`));
+app.listen(PORT, () => console.log(`Listening on port : ${PORT}`));
