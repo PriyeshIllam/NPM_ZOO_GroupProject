@@ -10,7 +10,7 @@ mammalsRouter.get("/echidna",(req,res) => {
    res.send("MammalsPage")
  })
 
-mammalsRouter.get("/tasmanian Devil",(req,res) => {
+mammalsRouter.get("/tasmanianDevil",(req,res) => {
    res.send("MammalsPage")
  })
 
