@@ -34,6 +34,6 @@ let reptiles = [
     new Animal("reptile", "Yellow Tailed Black Cockatoo", 0.65, 0.9, 41, "birds", "Fruit seeds, and other plant material", "It has a short crest on the top of its head. Its plumage is mostly brownish black and it has prominent yellow cheek patches and a yellow tail band. The body feathers are edged with yellow giving a scalloped appearance. The adult male has a black beak and pinkish-red eye-rings, and the female has a bone-coloured beak and grey eye-rings. In flight, yellow-tailed black cockatoos flap deeply and slowly, with a peculiar heavy fluid motion. Their loud, wailing calls carry for long distances. The whiteae is found south of Victoria to the East of South Australia and is smaller in size. The yellow-tailed black cockatoo is found in temperate forests and forested areas across south and central eastern Queensland to southeastern South Australia, including a very small population persisting in the Eyre Peninsula.", "South East Australia", "./images/yellowtailedblackcockatoo.jpg")
 ];
 
-const allAnimals = {mammals, birds, reptiles};
+const allAnimals = [...mammals, ...birds, ...reptiles]; //spread operator
 
 export default allAnimals;

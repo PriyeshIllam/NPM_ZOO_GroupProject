@@ -1,6 +1,6 @@
 import express from 'express';
 import * as path from 'path';
-import animals from './data/animal.js';  // Import your animal data
+import allAnimals from './data/animal.js';  // Import your animal data
 
 const PORT = 3001;
 const app = express();
@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
     res.render("pages/home", {
         title: "Welcome to the Bronx Zoo",
         bodyClass: "home",
-        animals: animals // Pass the animals data to the home page
+        animals: allAnimals // Pass the animals data to the home page
     });
 });
 

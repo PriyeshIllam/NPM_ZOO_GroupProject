@@ -8,17 +8,18 @@
 </head>
 <body class="<%= bodyClass %>">
     <header>
-        <% include ../partials/navbar.ejs %>
+        <%- include("../partials/navbar.ejs")  %>
     </header>
     <div class="container">
         <aside>
-            <% include ../partials/sidebar.ejs %>
+            <%- include("../partials/sidebar.ejs")  %>
         </aside>
         <main>
             <h1>Welcome to the Bronx Zoo</h1>
             <p>Your adventure into the wild begins here!</p>
 
             <h2>Animals</h2>
+            <% if (locals.animals) {%>
             <ul>
                 <% animals.forEach(animal => { 
                   
@@ -36,6 +37,7 @@
                     </li>
                 <% }); %>
             </ul>
+           <% } %>
         </main>
     </div>
 </body>
