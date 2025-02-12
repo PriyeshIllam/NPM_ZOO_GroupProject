@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    background-color: #7d9180;
+}
+
+.page_title {
+    margin: 48px 0;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 2rem;
+}
+
+.main_container {
+    flex-grow: 1;
+    display: flex;
+    background-color: #B5C9C3 ;
+}
+
+.sidebar {
+    flex: 0 0 25%;
+}
+
+.welcome_details {
+    flex: 0 0 75%;
+}
+
+.footer {
+    background-color: #7d9180;
+    text-align: center;
+}
