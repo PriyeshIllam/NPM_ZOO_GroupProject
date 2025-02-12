@@ -12,23 +12,42 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-image: url("/images/pexels-vladimirsrajber-30574316.jpg");
-    filter: grayscale(0.5);
+    background-image: url("/images/home_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .header {
-    display: flex;
-    /*background-color: #7d9180;*/
+    display: flex ;
+    justify-content: center;
 }
 
-.page_title {
-    margin: 48px 0;
-    text-align: center;
-    flex-grow: 1;
-    font-size: 2rem;
+.logo {
+    margin: 8px;
+    padding: 16px;
 }
+
+.logo img{
+    width: auto;
+    height: 100%;
+}
+
+.heading {
+    margin-left: 0;
+}
+
+.title {
+    margin: 16px;
+    padding: 16px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 
 .nav_menu {
     display: flex;
@@ -38,24 +57,45 @@ body {
 .nav_menu a{
     text-decoration: none;
     font-size: 1.6rem;
-    color: #696047;
+    color: #e9b118;
 }
 
 .main_container {
     flex-grow: 1;
     display: flex;
-    /*background-color: #B5C9C3 ;*/
 }
 
 .sidebar {
     flex: 0 0 25%;
+    margin: 8px;
+    padding: 8px;
+    color: white;
 }
 
 .welcome_details {
     flex: 0 0 75%;
+    margin: 8px;
+    padding: 8px;
+    color: #fff;
 }
 
 .footer {
     background-color: #7d9180;
     text-align: center;
+}
+
+@media screen and (max-width : 600px) {
+
+    .title {
+        margin-left: 0;
+        padding-left: 0;
+        font-size: 1.6rem;
+    }
+
+    .nav_menu a{
+        text-decoration: none;
+        font-size: 1rem;
+        color: #e9b118;
+    }   
+    
 }
