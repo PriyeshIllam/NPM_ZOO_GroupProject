@@ -12,11 +12,14 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    background-image: url("/images/home_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header {
     display: flex;
-    background-color: #7d9180;
+    /*background-color: #7d9180;*/
 }
 
 .page_title {
@@ -26,10 +29,21 @@ body {
     font-size: 2rem;
 }
 
+.nav_menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav_menu a{
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #696047;
+}
+
 .main_container {
     flex-grow: 1;
     display: flex;
-    background-color: #B5C9C3 ;
+    /*background-color: #B5C9C3 ;*/
 }
 
 .sidebar {
