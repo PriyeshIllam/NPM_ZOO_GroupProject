@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header, aside, main {
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+}
+
+aside {
+    width: 200px;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+main {
+    flex: 1;
+    padding: 10px;
+}
