@@ -35,5 +35,4 @@ let reptiles = [
 ];
 
 // Export animals
-export const animals = {mammals, birds, reptiles 
-};
+export const animals = {mammals, birds, reptiles};
