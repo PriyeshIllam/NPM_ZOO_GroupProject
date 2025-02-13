@@ -1,21 +1,27 @@
 import express from 'express';
-import * as path from 'path';
-import allAnimals from './data/animal.js';  // Import your animal data
+import allAnimals from './data/animal.js';
 
-const PORT = 3001;
 const app = express();
-const __dirname = path.resolve();
 
-app.set("views", path.join(__dirname, "views"));
-app.use(express.static(path.join(__dirname, "public")));
-app.set("view engine", "ejs");
+app.set('view engine', 'ejs');
 
-app.get("/", (req, res) => {
-    res.render("pages/home", {
-        title: "Welcome to the Bronx Zoo",
-        bodyClass: "home",
-        animals: allAnimals // Pass the animals data to the home page
-    });
+app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+    res.render('index', { allAnimals });
 });
 
-app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
+// Route to view details for a specific animal
+app.get('/animal/:name', (req, res) => {
+    const animalName = req.params.name;
+    const animal = allAnimals.find(a => a.name === animalName);
+    if (animal) {
+        res.render('animal', { animal });
+    } else {
+        res.status(404).send('Animal not found');
+    }
+});
+
+app.listen(3000, () => {
+    console.log('Server is running on http://localhost:3000');
+});

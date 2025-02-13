@@ -1,6 +1,12 @@
-<aside>
-    <h3>Sidebar</h3>
+<div class="sidebar">
+    <h2>Animal Names</h2>
     <ul>
-        <li><a href="../data/animal.js">Animals</a></li>
+        <% allAnimals.forEach(animal=> { %>
+            <li>
+                <a href="/animal/<%= animal.name %>">
+                    <%= animal.name %>
+                </a>
+            </li>
+        <% }); %>
     </ul>
-</aside>
+</div>

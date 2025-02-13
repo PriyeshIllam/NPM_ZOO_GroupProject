@@ -1,10 +1,21 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+* {
+    box-sizing: border-box;
+}
+html {
+    min-height: 100vh;
 }
 
-header, aside, main {
-    padding: 10px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    max-height: 100%;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
 }
 
 .container {
@@ -12,12 +23,59 @@ header, aside, main {
 }
 
 aside {
-    width: 200px;
+    width: 400px; 
+    background-color: #f1f1f1;
     padding: 10px;
-    border-right: 1px solid #ccc;
 }
 
-main {
-    flex: 1;
-    padding: 10px;
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
 }
+
+.main-content h2 {
+    margin-top: 0;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    padding: 8px;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+aside ul li a:hover {
+    background-color: #ddd;
+    display: block;
+}
+
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    justify-content: space-between;
+}
+
+.navbar li {
+    margin: 0; 
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+}
+
+.navbar a:hover {
+    background-color: #f0f0f0; 
+}
+
