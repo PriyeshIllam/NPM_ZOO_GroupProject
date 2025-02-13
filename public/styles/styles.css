@@ -60,7 +60,7 @@ body {
     color: #e9b118;
 }
 
-.main_container {
+.container {
     flex-grow: 1;
     display: flex;
 }
@@ -72,7 +72,7 @@ body {
     color: white;
 }
 
-.welcome_details {
+.main_content {
     flex: 0 0 75%;
     margin: 8px;
     padding: 8px;
