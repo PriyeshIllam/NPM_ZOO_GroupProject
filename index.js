@@ -10,6 +10,7 @@ app.use(express.static(path.join(__dirname,"public")));
 app.set("view engine","ejs");
 
 import allAnimals from './data/animal.js';
+import mammalsRouter from './routes/mammalRouter.js';
 
 
 app.get('/', (req, res) => {
@@ -26,7 +27,7 @@ app.get('/', (req, res) => {
                 break; 
             }
         }
-             
+
     if (animal) {
         res.render('pages/animal.ejs', { animal });
     } else {
@@ -34,7 +35,7 @@ app.get('/', (req, res) => {
     }
 });
 
-
+app.use("/mammals",mammalsRouter)
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 });
