@@ -11,10 +11,16 @@ app.get('/', (req, res) => {
     res.render('index', { allAnimals });
 });
 
-// Route to view details for a specific animal
-app.get('/animal/:name', (req, res) => {
-    const animalName = req.params.name;
-    const animal = allAnimals.find(a => a.name === animalName);
+    app.get('/animal/:name', (req, res) => {
+        const animalName = req.params.name; //access route parameters
+        let animal;
+    
+        for (let i = 0; i < allAnimals.length; i++) {
+            if (allAnimals[i].name === animalName) {
+                animal = allAnimals[i];
+                break; 
+            }
+        }
     if (animal) {
         res.render('animal', { animal });
     } else {
