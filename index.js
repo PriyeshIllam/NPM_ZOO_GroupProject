@@ -1,4 +1,14 @@
 import express from 'express';
+import * as path from "path";
+
+const PORT = 3001;
+const app = express ();
+const __dirname = path.resolve();
+
+app.set("views",path.join(__dirname,"views"));
+app.use(express.static(path.join(__dirname,"public")));
+app.set("view engine","ejs");
+
 import allAnimals from './data/animal.js';
 
 const app = express();
