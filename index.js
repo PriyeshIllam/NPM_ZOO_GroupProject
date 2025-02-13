@@ -11,11 +11,6 @@ app.set("view engine","ejs");
 
 import allAnimals from './data/animal.js';
 
-const app = express();
-
-app.set('view engine', 'ejs');
-
-app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.render('pages/home.ejs', { allAnimals });
@@ -31,7 +26,7 @@ app.get('/', (req, res) => {
                 break; 
             }
         }
-        
+             
     if (animal) {
         res.render('pages/animal.ejs', { animal });
     } else {
