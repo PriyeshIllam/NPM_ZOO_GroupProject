@@ -1,6 +1,7 @@
 import express from 'express';
 import mammalsRouter from './routes/mammalRouter.js';
 import * as path from "path";
+import birdsRouter from './routes/birdsRouter.js';
 const PORT = 3001;
 const app = express ();
 const __dirname = path.resolve();
@@ -20,5 +21,6 @@ app.get("/",(req,res) => {
  })
 
  app.use("/mammals", mammalsRouter);
+ app.use("/birds",birdsRouter);
  
  app.listen(PORT, () => console.log(`Listening on port : ${PORT}`));
