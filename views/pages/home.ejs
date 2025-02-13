@@ -1,44 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <link rel="stylesheet" href="./styles/styles.css"> 
-</head>
-<body class="<%= bodyClass %>">
-    <header>
-        <%- include("../partials/navbar.ejs")  %>
-    </header>
-    <div class="container">
-        <aside>
-            <%- include("../partials/sidebar.ejs")  %>
-        </aside>
-        <main>
-            <h1>Welcome to the Bronx Zoo</h1>
-            <p>Your adventure into the wild begins here!</p>
 
-            <h2>Animals</h2>
-            <% if (locals.animals) {%>
-            <ul>
-                <% animals.forEach(animal => { 
-                  
-                    %>
-                    <li> 
-                        <span><%= animal.type %></span>
-                        <span> <%= animal.name %></span>
-                        <span><%= animal.length %></span>
-                        <span><%= animal.weight %></span>
-                        <span><%= animal.lifespan %></span>
-                        <span><%= animal.food %></span>
-                        <span><%= animal.description %></span>
-                        <span><%= animal.found %></span>
-                        <span><%= animal.image %></span>    
-                    </li>
-                <% }); %>
-            </ul>
-           <% } %>
-        </main>
+<%- include("../partials/head.ejs")  %>
+<body class="<%= bodyClass %>">
+    <%- include("../partials/header.ejs")  %>
+    <div class="main_container">
+        <%- include("../partials/sidebar.ejs")  %>
+        <%- include("../partials/maincontent.ejs")  %>
     </div>
+    <%- include("../partials/footer.ejs")  %>
 </body>
-</html>
