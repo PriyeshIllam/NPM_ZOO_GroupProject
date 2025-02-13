@@ -26,7 +26,7 @@ body {
     font-size: 2rem;
 }
 
-.main_container {
+.container {
     flex-grow: 1;
     display: flex;
     background-color: #B5C9C3 ;
@@ -34,10 +34,21 @@ body {
 
 .sidebar {
     flex: 0 0 25%;
+    padding: 16px;
 }
 
-.welcome_details {
+.sidebar ul li{
+    padding: 10px;
+    margin: 5px;
+}
+
+.animal {
+    text-decoration: none;
+}
+
+.main-content {
     flex: 0 0 75%;
+    padding: 16px;
 }
 
 .footer {
