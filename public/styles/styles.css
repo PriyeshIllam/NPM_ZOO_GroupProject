@@ -26,7 +26,7 @@ body {
     font-size: 2rem;
 }
 
-.main_container {
+.container {
     flex-grow: 1;
     display: flex;
     background-color: #B5C9C3 ;
@@ -36,7 +36,7 @@ body {
     flex: 0 0 25%;
 }
 
-.welcome_details {
+.main_content {
     flex: 0 0 75%;
 }
 

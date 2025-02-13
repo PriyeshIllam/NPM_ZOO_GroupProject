@@ -10,22 +10,24 @@ app.use(express.static(path.join(__dirname,"public")));
 app.set("view engine","ejs");
 
 app.get("/",(req,res) => {
-    res.render("pages/home", {
-      title : "Welcome to the Bronx zoo",
-      bodyClass : "home"
+    res.render("index",{
+        allAnimals,
+        title : "homepage"
     })
- })
-
-// Route to view details for a specific animal
+})
 app.get('/animal/:name', (req, res) => {
     const animalName = req.params.name;
-    const animal = allAnimals.find(a => a.name === animalName);
+const animal = allAnimals.find(a => a.name === animalName);
     if (animal) {
         res.render('animal', { animal });
     } else {
         res.status(404).send('Animal not found');
     }
 });
+
+
+// Route to view details for a specific animal
+
 
  app.listen(PORT, () => console.log(`Listening on port : ${PORT}`));
 

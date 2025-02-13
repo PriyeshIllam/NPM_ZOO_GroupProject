@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animal App</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
 
 <body>
     <div>
             <body>
 
-                <header>
+                <%- include("./partials/header.ejs")  %>
                     <%- include("./partials/navbar.ejs")  %>
                 </header>
                 <div class="container">
-                    <aside>
-                        <%- include("./partials/sidebar.ejs",) %>
-                    </aside>
+                    
+                        <%- include("./partials/sidebar.ejs") %>
+                    
 
                         <div class="main-content">
                             <h2>Click on an animal name to see its details</h2>
