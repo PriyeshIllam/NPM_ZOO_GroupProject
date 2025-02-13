@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= animal.name %> Details</title>
+</head>
+<body>
+    <h1><%= animal.name %></h1>
+    <img src="<%= animal.image %>" alt="<%= animal.name %>">
+    <p><strong>Type:</strong> <%= animal.type %></p>
+    <p><strong>Length:</strong> <%= animal.length %> cm</p>
+    <p><strong>Weight:</strong> <%= animal.weight %> kg</p>
+    <p><strong>Lifespan:</strong> <%= animal.lifespan %> years</p>
+    <p><strong>Diet:</strong> <%= animal.food %></p>
+    <p><strong>Description:</strong> <%= animal.description %></p>
+    <p><strong>Found in:</strong> <%= animal.found %></p>
+    <a href="/">Back to list</a>
+</body>
+</html>

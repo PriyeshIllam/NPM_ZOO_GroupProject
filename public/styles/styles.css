@@ -48,7 +48,6 @@ body {
     text-transform: uppercase;
 }
 
-
 .nav_menu {
     display: flex;
     justify-content: space-around;
@@ -58,6 +57,18 @@ body {
     text-decoration: none;
     font-size: 1.6rem;
     color: #e9b118;
+}
+
+.header {
+    display: flex;
+    background-color: #7d9180;
+}
+
+.page_title {
+    margin: 48px 0;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 2rem;
 }
 
 .container {
@@ -76,7 +87,16 @@ body {
     flex: 0 0 75%;
     margin: 8px;
     padding: 8px;
-    color: #fff;
+    color: #fff;;
+}
+
+.sidebar ul li{
+    padding: 10px;
+    margin: 5px;
+}
+
+.animal {
+    text-decoration: none;
 }
 
 .footer {
@@ -99,3 +119,4 @@ body {
     }   
     
 }
+
