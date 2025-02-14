@@ -23,6 +23,7 @@
   "homepage": "https://github.com/PriyeshIllam/NPM_ZOO_GroupProject#readme",
   "dependencies": {
     "ejs": "^3.1.10",
+    "express": "^4.21.2",
     "nodemon": "^3.1.9"
   }
 }
