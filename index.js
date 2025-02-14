@@ -10,7 +10,9 @@ app.use(express.static(path.join(__dirname,"public")));
 app.set("view engine","ejs");
 
 
- 
+import allAnimals from './data/animal.js';
+import reptilesRouter from './routes/reptilesRouter.js';
+
 
 app.get("/",(req,res) => {
     res.render("pages/home", {
@@ -20,5 +22,8 @@ app.get("/",(req,res) => {
  })
 
  app.use("/mammals", mammalsRouter);
+
+ app.use("/reptiles",reptilesRouter)
+
  
  app.listen(PORT, () => console.log(`Listening on port : ${PORT}`));
