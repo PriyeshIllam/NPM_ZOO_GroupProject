@@ -7,7 +7,7 @@ mammalsRouter.get("/",(req,res) => {
  })
 
 mammalsRouter.get("/echidna",(req,res) => {
-   res.send("MammalsPage")
+   
  })
 
 mammalsRouter.get("/tasmanianDevil",(req,res) => {
