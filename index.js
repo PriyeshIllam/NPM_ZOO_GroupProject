@@ -17,8 +17,8 @@ app.get('/', (req, res) => {
     res.render('pages/home.ejs', { allAnimals });
 });
 
-    app.get('/animal/:name', (req, res) => {
-        const animalName = req.params.name; //access route parameters
+app.get('/animal/:name', (req, res) => {
+    const animalName = req.params.name; //access route parameters
         let animal;
     
         for (let i = 0; i < allAnimals.length; i++) {
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
         }
 
     if (animal) {
-        res.render('pages/animal.ejs', { animal });
+        res.render('pages/animal.ejs', {animal});
     } else {
         res.status(404).send('Animal not found');
     }
