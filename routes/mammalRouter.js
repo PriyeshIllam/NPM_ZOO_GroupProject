@@ -3,9 +3,10 @@ import { mammals } from "../data/animal.js";
 
 const mammalsRouter = express.Router();
 
-mammalsRouter.get("/",(req,res) => {
-   res.send("Welcome to MammalsPage")
- })
+mammalsRouter.get('/', (req, res) => {
+    res.render('pages/home.ejs', {
+      animals: mammals});
+});
 
 mammalsRouter.get('/animal/:name', (req, res) => {
     const animalName = req.params.name; //access route parameters
