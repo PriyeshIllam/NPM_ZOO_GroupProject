@@ -1,6 +1,6 @@
 import express from 'express';
 import mammalsRouter from './routes/mammalRouter.js';
-import allAnimals from './data/animal.js';
+import {allAnimals, homeContent} from './data/animal.js';
 import * as path from "path";
 
 const PORT = 3000;
@@ -12,7 +12,9 @@ app.use(express.static(path.join(__dirname,"public")));
 app.set("view engine","ejs");
 
 app.get('/', (req, res) => {
-    res.render('pages/home.ejs', { allAnimals });
+    res.render('pages/home.ejs', { 
+        allAnimals,
+    homeContent });
 });
 
 app.get('/animal/:name', (req, res) => {

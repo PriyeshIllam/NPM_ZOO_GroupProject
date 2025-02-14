@@ -43,6 +43,33 @@ let birds = [
         "SE Austalia", "../images/yellowtailedblackcockatoo.jpg")
 ];
 
+function Content (subHeading,maincontent){
+    this.subHeading = subHeading,
+    this.maincontent = maincontent
+}
+
+let homeContent = [
+    new Content("Experience the Wild Like Never Before!",
+                "Step into Nature's Zoo, where adventure meets education! Explore diverse habitats, discover amazing animals, and learn about the importance of wildlife conservation. Whether you love majestic mammals, fascinating reptiles, or colorful birds, we have something for everyone!"
+    ),
+
+    new Content("Mammals - The Heart of the Wild",
+                "From the mighty African lions to the playful red pandas, our mammal zone is home to incredible creatures from around the world. Don’t miss our elephant sanctuary and the adorable lemurs in our rainforest habitat!"
+    ),
+
+    new Content("Reptiles - The Ancient Survivors",
+                "Enter the world of cold-blooded wonders! Watch the powerful crocodiles, slithering pythons, and the rare Komodo dragon in action. Discover how these reptiles have adapted to their environments over millions of years."
+    ),
+
+    new Content("Birds - The Sky's the Limit",
+                "Walk through our free-flight aviary, where you'll be surrounded by vibrant macaws, flamingos, and owls. Experience the grace of eagles and hawks in our Birds of Prey exhibit!"
+    )
+]
+
+
+
 const allAnimals = [...mammals, ...birds, ...reptiles]; //spread operator
 
-export default allAnimals;
+
+
+export {allAnimals,homeContent};
