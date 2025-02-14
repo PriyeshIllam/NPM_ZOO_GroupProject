@@ -197,7 +197,7 @@ p {
     }
 }
 
-@media screen and (max-width:578px) {
+@media screen and (max-width:742px) {
     body {
         background-color: #e9b118;
     }
