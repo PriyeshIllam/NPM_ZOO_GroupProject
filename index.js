@@ -1,21 +1,15 @@
 import express from 'express';
+import mammalsRouter from './routes/mammalRouter.js';
+import allAnimals from './data/animal.js';
 import * as path from "path";
 
-const PORT = 3001;
+const PORT = 3000;
 const app = express ();
 const __dirname = path.resolve();
 
 app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"public")));
 app.set("view engine","ejs");
-
-import allAnimals from './data/animal.js';
-
-const app = express();
-
-app.set('view engine', 'ejs');
-
-app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.render('pages/home.ejs', { allAnimals });
@@ -44,3 +38,7 @@ app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 });
 
+ 
+ app.use("/mammals", mammalsRouter);
+ 
+ app.listen(PORT, () => console.log(`Listening on port : ${PORT}`));
