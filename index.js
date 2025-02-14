@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
     res.render('pages/home.ejs', { allAnimals });
 });
 
-    app.get('/animal/:name', (req, res) => {
+app.get('/animal/:name', (req, res) => {
         const animalName = req.params.name; //access route parameters
         let animal;
     
@@ -33,12 +33,7 @@ app.get('/', (req, res) => {
     }
 });
 
-
+app.use("/mammals", mammalsRouter);
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 });
-
- 
- app.use("/mammals", mammalsRouter);
- 
- app.listen(PORT, () => console.log(`Listening on port : ${PORT}`));
