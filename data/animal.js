@@ -83,41 +83,25 @@ let mammalsContent = [
                 "Known for their adorable smiles, quokkas are friendly, curious marsupials native to Australia. Come see them hop around and interact with their environment!"
     ),
 
-    new Content("🐾 Fun Facts About Mammals!",
-                "✔ The blue whale is the largest mammal, growing up to 100 feet long!"
-    ),
-
-    new Content("",
-                "✔ Bats are the only mammals that can fly."),
-    new Content("",
-                "✔ Koalas sleep for up to 20 hours a day!")
 ]
 
 let birdsContent = [
-    new Content("Mammals at Nature's Zoo 🦘🐨🐻",
-                "Mammals are some of the most fascinating creatures on Earth, known for their warm-blooded nature, fur or hair, and ability to nurse their young. At Nature's Zoo, we house a diverse collection of mammals, from playful marsupials to powerful predators!"
+    new Content("Birds at Nature's Zoo 🦜🦢🦅",
+                "Birds are among the most diverse and fascinating creatures on Earth, known for their bright plumage, melodic calls, and incredible flight abilities. At Nature's Zoo, you can experience a wide variety of birds, from powerful raptors to colorful songbirds!"
     ),
 
-    new Content("🦔 Echidna - The Egg-Laying Mammal",
-                "One of only two monotremes in the world, the echidna is a spiky, burrowing creature that lays eggs yet feeds its young with milk! Watch them use their long, sticky tongues to feast on ants and termites."
+    new Content("🦤 Cassowary - The Rainforest Guardian",
+                "One of the world's most unique and powerful flightless birds, the cassowary is known for its vibrant blue skin, helmet-like casque, and dagger-like claws. These shy but strong birds play a crucial role in rainforest ecosystems by spreading seeds."
     ),
 
-    new Content("🐻‍❄️ Tasmanian Devil - The Feisty Carnivore",
-                "These small but mighty marsupials are known for their powerful jaws and loud screeches. At Nature's Zoo, see them in action as they scavenge and play!"
+    new Content("😂 Kookaburra - The Laughing Bird",
+                "Famous for its distinctive laughing call, the kookaburra is a type of kingfisher found in Australia. Listen for their cheerful sounds as they perch in the trees!"
     ),
 
-    new Content("😊Quokka - The Happiest Animal on Earth",
-                "Known for their adorable smiles, quokkas are friendly, curious marsupials native to Australia. Come see them hop around and interact with their environment!"
-    ),
-
-    new Content("🐾 Fun Facts About Mammals!",
-                "✔ The blue whale is the largest mammal, growing up to 100 feet long!"
-    ),
-
-    new Content("",
-                "✔ Bats are the only mammals that can fly."),
-    new Content("",
-                "✔ Koalas sleep for up to 20 hours a day!")
+    new Content("⚫🟡 Yellow-Tailed Black Cockatoo - The Majestic Parrot",
+                "A rare and strikingly beautiful parrot, the yellow-tailed black cockatoo is known for its deep black feathers, bright yellow cheek patches, and long yellow tail feathers. These intelligent birds are highly social and can often be seen gliding gracefully in flocks.",
+                
+    )
 ]
 
 const allAnimals = [...mammals, ...birds, ...reptiles]; //spread operator
