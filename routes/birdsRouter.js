@@ -1,16 +1,14 @@
 import express from "express"
-
+import {birds,birdsContent} from "../data/animal.js"
 const birdsRouter = express.Router();
 
 birdsRouter.get("/",(req,res) => {// birds.render()
-    res.render("pages/featurepage",{
-        bodyclass:"birds",
-        title : "welcome to birds  page",
-        subtitle : 
-"Birds are a group of warm-blooded vertebrates constituting the class Aves, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton"
-
+    res.render("pages/home",{
+        bodyClass:"birds",
+        animals : birds,
+        content : birdsContent
     })
-    res.send("from the bird's page")
+   
 
 })
 

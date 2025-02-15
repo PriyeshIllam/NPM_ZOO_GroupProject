@@ -7,6 +7,7 @@ mammalsRouter.get("/",(req,res) => {
    res.render("pages/home",{
       animals : mammals,
       content : mammalsContent,
+      bodyClass : "mammals"
    })
  })
 

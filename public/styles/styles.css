@@ -12,7 +12,22 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column; 
+}
+
+body.home {
     background-image: url("/images/home_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.mammals {
+    background-image: url("/images/t1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.birds {
+    background-image: url("/images/bird2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -57,18 +72,6 @@ body {
     text-decoration: none;
     font-size: 1.6rem;
     color: #e9b118;
-}
-
-.header {
-    display: flex;
-    background-color: #7d9180;
-}
-
-.page_title {
-    margin: 48px 0;
-    text-align: center;
-    flex-grow: 1;
-    font-size: 2rem;
 }
 
 .container {

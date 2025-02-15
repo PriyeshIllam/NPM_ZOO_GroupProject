@@ -1,5 +1,6 @@
 import express from 'express';
 import mammalsRouter from './routes/mammalRouter.js';
+import birdsRouter from './routes/birdsRouter.js'
 import {allAnimals,homeContent} from './data/animal.js';
 import * as path from "path";
 
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
     res.render("pages/home",{
         animals : allAnimals, //display all animals in sidebar
         content : homeContent, //maincontent
+        bodyClass : "home"
     })
                          
 });
@@ -38,6 +40,7 @@ app.get('/animal/:name', (req, res) => {
 });
 
 app.use("/mammals", mammalsRouter);
+app.use("/birds",birdsRouter);
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 });
