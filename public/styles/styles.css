@@ -105,79 +105,6 @@ h2 {
     color: #e9b118;
 }
 
-/*footer*/
-.footer {
-    background-color: #7d9180;
-<<<<<<< HEAD
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-        "logo contact social"
-        "copyright copyright copyright";
-    padding: 24px;
-    gap: 36px;
-    align-items: center;
-    text-align: center;   
-}
-
-.footer_social-media a {
-    text-decoration: none;
-}
-
-.footer-logo h2 {
-    font-size: 1.5rem;
-}
-
-.footer-contact h4 {
-    font-size: 1.5rem;
-}
-
-.footer-logo ul {
-    display:flex;
-    flex-direction: column
-}
-
-.footer-logo ul a {
-    text-decoration: none;
-    color: black;
-}
-
-.footer_social-media h4 {
-    font-size: 1.5rem;
-}
-
-.footer-logo img {
-    width: 250px;
-    height: 100px;
-}
-
-.footer-copyright {
-    grid-area: copyright;
-    padding: 10px;
-}
-
-.facts h4 {
-    font-size: 1.5rem;
-    padding: 0.5px;
-}
-
-.facts ul {
-    display:flex;
-    flex-direction: column
-}
-
-.facts ul a {
-    color: black;
-    font-size: 1rem;
-    font-style: normal; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
-    padding: 7px; 
-    text-decoration: none;
-=======
-    color: #fff;
-    text-align: center;
-}
-
 /*animal.ejs css*/
 .animal_body {
     text-align: center;
@@ -277,5 +204,72 @@ p {
         height: auto;
         width: 50%;
     }
->>>>>>> origin/main
+}
+
+.footer {
+    background-color: #7d9180;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "logo contact social"
+        "copyright copyright copyright";
+    padding: 24px;
+    gap: 36px;
+    align-items: center;
+    text-align: center;   
+}
+
+.footer_social-media a {
+    text-decoration: none;
+}
+
+.footer-logo h2 {
+    font-size: 1.5rem;
+}
+
+.footer-contact h4 {
+    font-size: 1.5rem;
+}
+
+.footer-logo ul {
+    display:flex;
+    flex-direction: column
+}
+
+.footer-logo ul a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer_social-media h4 {
+    font-size: 1.5rem;
+}
+
+.footer-logo img {
+    width: 250px;
+    height: 100px;
+}
+
+.footer-copyright {
+    grid-area: copyright;
+    padding: 10px;
+}
+
+.facts h4 {
+    font-size: 1.5rem;
+    padding: 0.5px;
+}
+
+.facts ul {
+    display:flex;
+    flex-direction: column
+}
+
+.facts ul a {
+    color: black;
+    font-size: 1rem;
+    font-style: normal; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    padding: 7px; 
+    text-decoration: none;
 }
