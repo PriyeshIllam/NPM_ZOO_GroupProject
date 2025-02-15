@@ -11,7 +11,7 @@ app.set("view engine","ejs");
 
 import allAnimals from './data/animal.js';
 import mammalsRouter from './routes/mammalRouter.js';
-import birds from './data/animal.js'; // import the birds data
+import birds from './routes/birds.js';
 import reptilesRouter from './routes/reptilesRouter.js';
 
 app.get('/', (req, res) => {
@@ -28,6 +28,7 @@ app.get('/animal/:name', (req, res) => {
                 break; 
             }
         }
+        
 
     if (animal) {
         res.render('pages/animal.ejs', {animal});
@@ -36,13 +37,10 @@ app.get('/animal/:name', (req, res) => {
     }
 });
 
-app.get('/birds', (req, res) => {
-    const onlyBirds = allAnimals.filter(animal => animal.type === "Bird");
-    res.render('pages/birds.ejs', { birds: onlyBirds });
-});
-
 app.use("/mammals",mammalsRouter)
 app.use("/reptiles",reptilesRouter)
+app.use("/birds",birds)
+
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 });
