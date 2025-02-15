@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head.ejs")  %>
+<body>
+    <%- include("../partials/header.ejs")  %>
+    <%- include("../partials/navigation.ejs")  %>
+    <div class="container">
+    <h1>Birds of the World</h1>
+    <ul>
+        <% birds.forEach(bird => { %>
+            <li>
+                <h2><%= bird.name %></h2>
+                <a href="/animal/<%= bird.name %>">Learn more <%= bird.name %></a>
+            </li>
+        <% }) %>
+    </ul>
+    <%- include("../partials/maincontent.ejs") %>
+    </div>
+        <%- include("../partials/footer.ejs")  %>
+
+   
+</body>
+</html>

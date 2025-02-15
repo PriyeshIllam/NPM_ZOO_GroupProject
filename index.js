@@ -2,15 +2,17 @@ import express from 'express';
 import mammalsRouter from './routes/mammalRouter.js';
 import birdsRouter from './routes/birdsRouter.js'
 import {allAnimals,homeContent} from './data/animal.js';
+import reptilesRouter from './routes/reptilesRouter.js';
 import * as path from "path";
 
-const PORT = 3000;
 const app = express ();
 const __dirname = path.resolve();
 
 app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"public")));
 app.set("view engine","ejs");
+
+import birds from './data/animal.js'; // import the birds data
 
 app.get('/', (req, res) => {
     res.render("pages/home",{
@@ -31,16 +33,24 @@ app.get('/animal/:name', (req, res) => {
                 break; 
             }
         }
-        
+
     if (animal) {
-        res.render('pages/animal.ejs', { animal });
+        res.render('pages/animal.ejs', {animal});
     } else {
         res.status(404).send('Animal not found');
     }
 });
 
-app.use("/mammals", mammalsRouter);
+app.get('/birds', (req, res) => {
+    const onlyBirds = allAnimals.filter(animal => animal.type === "Bird");
+    res.render('pages/birds.ejs', { birds: onlyBirds });
+});
+
+app.use("/mammals",mammalsRouter)
+app.use("/reptiles",reptilesRouter)
 app.use("/birds",birdsRouter);
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 });
+
+
