@@ -11,6 +11,7 @@ app.set("view engine","ejs");
 
 import allAnimals from './data/animal.js';
 import mammalsRouter from './routes/mammalRouter.js';
+import birds from './data/animal.js'; // import the birds data
 
 
 app.get('/', (req, res) => {
@@ -33,6 +34,11 @@ app.get('/animal/:name', (req, res) => {
     } else {
         res.status(404).send('Animal not found');
     }
+});
+
+app.get('/birds', (req, res) => {
+    const onlyBirds = allAnimals.filter(animal => animal.type === "Bird");
+    res.render('pages/birds.ejs', { birds: onlyBirds });
 });
 
 app.use("/mammals",mammalsRouter)
