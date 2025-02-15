@@ -12,7 +12,7 @@ app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"public")));
 app.set("view engine","ejs");
 
-import birds from './data/animal.js'; // import the birds data
+import {birds} from './data/animal.js'; // import the birds data
 
 app.get('/', (req, res) => {
     res.render("pages/home",{
