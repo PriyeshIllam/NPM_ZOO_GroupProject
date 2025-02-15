@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= animal.name %> Details</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <%- include("../partials/head.ejs")  %>
 </head>
-<body>
-    <h1><%= animal.name %></h1>
-    <img src="<%= animal.image %>" alt="<%= animal.name %>">
+<body class="animal_body">
+    <container class="animal_container">
+    <img class="image" src="<%= animal.image %>" alt="<%= animal.name %>">
+    <h1 class="animal_name"><%= animal.name %></h1>
+    <div class="information">
     <p><strong>Type:</strong> <%= animal.type %></p>
     <p><strong>Length:</strong> <%= animal.length %> cm</p>
     <p><strong>Weight:</strong> <%= animal.weight %> kg</p>
@@ -15,6 +19,10 @@
     <p><strong>Diet:</strong> <%= animal.food %></p>
     <p><strong>Description:</strong> <%= animal.description %></p>
     <p><strong>Found in:</strong> <%= animal.found %></p>
-    <a href="/">Back to list</a>
+</div>
+<a class="back_button" href="/">Home</a>
+</container>
 </body>
 </html>
+
+

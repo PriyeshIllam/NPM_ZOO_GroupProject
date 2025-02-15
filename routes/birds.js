@@ -4,11 +4,11 @@ import allAnimals from '../data/animal.js'; // Ensure correct path
 const router = express.Router();
 
 // Filter only reptiles
-const reptiles = allAnimals.filter(animal => animal.type.toLowerCase() === 'reptile');
+const birds = allAnimals.filter(animal => animal.type.toLowerCase() === 'bird');
 
 router.get('/', (req, res) => {
-    res.render('pages/reptiles', {allAnimals, reptiles,
-      title : "Reptiles Page",
+    res.render('pages/birds', {allAnimals, birds,
+      title : "Birds Page",
     }); // Pass both variables
 });
 
