@@ -16,7 +16,7 @@ import reptilesRouter from './routes/reptilesRouter.js';
 
 app.get('/', (req, res) => {
     res.render('pages/home.ejs', 
-        { animal: allAnimals });
+        { animals: allAnimals });
 });
 
 app.get('/animal/:name', (req, res) => {
