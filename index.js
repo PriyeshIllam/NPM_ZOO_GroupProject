@@ -12,7 +12,7 @@ app.set("view engine","ejs");
 import allAnimals from './data/animal.js';
 import mammalsRouter from './routes/mammalRouter.js';
 import birds from './data/animal.js'; // import the birds data
-
+import reptilesRouter from './routes/reptilesRouter.js';
 
 app.get('/', (req, res) => {
     res.render('pages/home.ejs', { allAnimals });
@@ -42,6 +42,7 @@ app.get('/birds', (req, res) => {
 });
 
 app.use("/mammals",mammalsRouter)
+app.use("/reptiles",reptilesRouter)
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 });
