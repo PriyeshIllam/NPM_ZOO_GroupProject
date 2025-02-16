@@ -9,13 +9,27 @@ html {
 
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    background-image: url("/images/home_bg.jpg");
+    flex-direction: column; 
+}
+
+body.home {
+    background-image: url("/images/deer.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+}
+
+body.mammals {
+    background-image: url("/images/t1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.birds {
+    background-image: url("/images/bird2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body.reptiles {
@@ -27,7 +41,6 @@ body.reptiles {
 .header {
     display: flex;
     justify-content: center;
-    background-color: #7d9180;
 }
 
 .logo {
@@ -85,13 +98,12 @@ body.reptiles {
 }
 
 .sidebar {
-    flex: 0 0 30%;
+    flex: 0 0 25%;
     color: white;
-    border-right: 1px solid gray;
 }
 
 .main_content {
-    flex: 0 0 70%;
+    flex: 0 0 75%;
     color: #fff;
 }
 
@@ -102,8 +114,9 @@ h2 {
 .sidebar ul li {
     padding: 10px;
     margin: 5px;
+    width: 150px;
     list-style-type: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .animal {
@@ -111,11 +124,22 @@ h2 {
     color: #e9b118;
 }
 
-.footer {
-    background-color: #7d9180;
-    color: #fff;
-    text-align: center;
+.content {
+    margin: 8px;
 }
+
+.content h3 {
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+.details {
+    text-indent: 30px;
+    font-size: 16px;
+}
+
+
+
 
 /*animal.ejs css*/
 .animal_body {
@@ -178,6 +202,97 @@ p {
     background-color: #e9b118;
 }
 
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "logo contact social"
+        "copyright copyright copyright";
+    padding: 24px;
+    gap: 36px;
+    align-items: center;
+    text-align: center; 
+    color: whitesmoke;  
+    background-color: #433f33;
+}
+
+.footer_social-media a {
+    text-decoration: none;
+}
+
+.footer-logo h2 {
+    font-size: 1.5rem;
+}
+
+.footer-logo h2:hover {
+    background-color: #4F5165;
+    color: wheat; 
+}
+
+.footer-contact h4 {
+    font-size: 1.5rem;
+}
+
+.footer-logo ul {
+    display:flex;
+    flex-direction: column
+}
+
+.footer-logo ul a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.footer_social-media h4 {
+    font-size: 1.5rem;
+}
+
+.footer-logo img {
+    width: 250px;
+    height: 100px;
+}
+
+.footer-copyright {
+    grid-area: copyright;
+    padding: 10px;
+}
+
+.facts h4 {
+    font-size: 1.5rem;
+    padding: 0.5px;
+}
+
+.facts ul {
+    display:flex;
+    flex-direction: column
+}
+
+.facts ul a {
+    color: whitesmoke;
+    font-size: 1rem;
+    font-style: normal; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    padding: 7px; 
+    text-decoration: none;
+}
+
+.facts ul a:hover {
+    background-color: #4F5165;
+    color: wheat;
+}
+
+@media screen and (max-width : 1000px) {
+    body {
+        background-color: #433f33;
+    }
+
+    body.home,
+    body.mammals,
+    body.birds,
+    body.reptiles {
+        background-image: none;
+    }
+}
 
 @media screen and (max-width : 768px) {
 
@@ -194,20 +309,12 @@ p {
     }
 
     .main_content {
-        display: flex;
-        flex: content;
+       margin: 8px;
     }
 
-    .container {
-        display: inline-block;
-    }
 }
 
 @media screen and (max-width:742px) {
-    body {
-        background-color: #e9b118;
-    }
-
     .animal_body {
         background-image: none;
     }
@@ -215,5 +322,15 @@ p {
     .image {
         height: auto;
         width: 50%;
+    }
+  
+    .animal {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:568px) {
+    .footer {
+        display:block;
     }
 }

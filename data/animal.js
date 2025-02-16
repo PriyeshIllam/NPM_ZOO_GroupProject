@@ -61,6 +61,69 @@ let reptilesContent = [
     ),
 
 ]
+
+function Content (subHeading,maincontent){
+    this.subHeading = subHeading,
+    this.maincontent = maincontent
+}
+
+let homeContent = [
+    new Content("Experience the Wild Like Never Before!",
+                "Step into Nature's Zoo, where adventure meets education! Explore diverse habitats, discover amazing animals, and learn about the importance of wildlife conservation. Whether you love majestic mammals, fascinating reptiles, or colorful birds, we have something for everyone!"
+    ),
+
+    new Content("Mammals - The Heart of the Wild",
+                "From the mighty African lions to the playful red pandas, our mammal zone is home to incredible creatures from around the world. Don't miss our elephant sanctuary and the adorable lemurs in our rainforest habitat!"
+    ),
+
+    new Content("Reptiles - The Ancient Survivors",
+                "Enter the world of cold-blooded wonders! Watch the powerful crocodiles, slithering pythons, and the rare Komodo dragon in action. Discover how these reptiles have adapted to their environments over millions of years."
+    ),
+
+    new Content("Birds - The Sky's the Limit",
+                "Walk through our free-flight aviary, where you'll be surrounded by vibrant macaws, flamingos, and owls. Experience the grace of eagles and hawks in our Birds of Prey exhibit!"
+    )
+]
+
+let mammalsContent = [
+    new Content("Mammals at Nature's Zoo 🦘🐨🐻",
+                "Mammals are some of the most fascinating creatures on Earth, known for their warm-blooded nature, fur or hair, and ability to nurse their young. At Nature's Zoo, we house a diverse collection of mammals, from playful marsupials to powerful predators!"
+    ),
+
+    new Content("🦔 Echidna - The Egg-Laying Mammal",
+                "One of only two monotremes in the world, the echidna is a spiky, burrowing creature that lays eggs yet feeds its young with milk! Watch them use their long, sticky tongues to feast on ants and termites."
+    ),
+
+    new Content("🐻‍❄️ Tasmanian Devil - The Feisty Carnivore",
+                "These small but mighty marsupials are known for their powerful jaws and loud screeches. At Nature's Zoo, see them in action as they scavenge and play!"
+    ),
+
+    new Content("😊Quokka - The Happiest Animal on Earth",
+                "Known for their adorable smiles, quokkas are friendly, curious marsupials native to Australia. Come see them hop around and interact with their environment!"
+    ),
+
+]
+
+let birdsContent = [
+    new Content("Birds at Nature's Zoo 🦜🦢🦅",
+                "Birds are among the most diverse and fascinating creatures on Earth, known for their bright plumage, melodic calls, and incredible flight abilities. At Nature's Zoo, you can experience a wide variety of birds, from powerful raptors to colorful songbirds!"
+    ),
+
+    new Content("🦤 Cassowary - The Rainforest Guardian",
+                "One of the world's most unique and powerful flightless birds, the cassowary is known for its vibrant blue skin, helmet-like casque, and dagger-like claws. These shy but strong birds play a crucial role in rainforest ecosystems by spreading seeds."
+    ),
+
+    new Content("😂 Kookaburra - The Laughing Bird",
+                "Famous for its distinctive laughing call, the kookaburra is a type of kingfisher found in Australia. Listen for their cheerful sounds as they perch in the trees!"
+    ),
+
+    new Content("⚫🟡 Yellow-Tailed Black Cockatoo - The Majestic Parrot",
+                "A rare and strikingly beautiful parrot, the yellow-tailed black cockatoo is known for its deep black feathers, bright yellow cheek patches, and long yellow tail feathers. These intelligent birds are highly social and can often be seen gliding gracefully in flocks.",
+                
+    )
+]
+
 const allAnimals = [...mammals, ...birds, ...reptiles]; //spread operator
 
-export {allAnimals, reptiles, reptilesContent};
+export {allAnimals,mammals,birds,reptiles, homeContent,mammalsContent,birdsContent, reptilesContent};
+

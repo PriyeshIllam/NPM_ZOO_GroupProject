@@ -1,26 +1,32 @@
-import express from "express"
+import express from "express";
+import { birds,birdsContent } from "../data/animal.js";
 
 const birdsRouter = express.Router();
 
-birdsRouter.get("/",(req,res) => {// birds.render()
-    res.render("pages/featurepage",{
-        bodyclass:"birds",
-        title : "welcome to birds  page",
-        subtitle : 
-"Birds are a group of warm-blooded vertebrates constituting the class Aves, characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton"
+birdsRouter.get("/",(req,res) => {
+   res.render("pages/home",{
+      animals : birds,
+      content : birdsContent,
+      bodyClass : "birds"
+   })
+ })
 
-    })
-    res.send("from the bird's page")
+birdsRouter.get('/animal/:name', (req, res) => {
+    const animalName = req.params.name; //access route parameters
+        let animal;
+    
+        for (let i = 0; i < birds.length; i++) {
+            if (birds[i].name === animalName) {
+                animal = birds[i];
+                break; 
+            }
+        }
 
-})
+    if (animal) {
+        res.render('pages/animal.ejs', {animal});
+    } else {
+        res.status(404).send('Animal not found');
+    }
+});
 
-birdsRouter.get("/feathers",(req,res) => {
-    res.send("strong features")
-})
-
-birdsRouter.get("/beak",(req,res) => {
-    res.send("have a toothless beak and jaw")
-})
-export default  birdsRouter
-
-
+export default birdsRouter;

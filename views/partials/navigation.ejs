@@ -1,23 +1,28 @@
 <nav class="nav_menu">
-    <% if(typeof home!== 'undefined'){ %>
-        <a href="/" class="active">Home</a>
-    <%} else { %>
-        <a href="/" >Home</a>
-    <% } %>"
-    <% if(typeof mammals!== 'undefined'){ %>
-        <a href="/mammals" class="active">Mammals</a>
-    <%} else { %>
-        <a href="/mammals" >Mammals</a>
-    <% } %>"
-    <% if(typeof birds!== 'undefined'){ %>
-        <a href="/birds" class="active">Birds</a>
-    <%} else { %>
-        <a href="/birds" >Birds</a>
-    <% } %>"
-    <% if(typeof reptiles!== 'undefined'){ %>
-        <a href="/reptiles" class="active">Reptiles</a>
-    <%} else { %>
-        <a href="/reptiles" >Reptiles</a>
-    <% } %>"
-    
+   <% if(locals.bodyClass) { %>
+        <% if(bodyClass === "home") { %>
+            <a href="/" class="active">Home</a>
+        <% } else { %>
+            <a href="/">Home</a>
+        <% } %>
+          
+        <% if (bodyClass === "mammals") { %>
+            <a href="/mammals" class="active">Mammals</a>
+        <% } else { %>
+            <a href="/mammals">mammals</a>
+        <% } %>
+            
+        <%  if (bodyClass === "birds") { %>
+            <a href="/birds" class="active">birds</a>
+        <% }  else { %>
+            <a href="/birds">birds</a>
+        <% } %>
+        
+        <% if (bodyClass === "reptiles") { %>
+            <a href="/reptiles" class="active">Reptiles</a>
+        <% }else { %>
+            <a href="/reptiles">reptiles</a>
+        <% } %>
+  <% } %> 
+      
 </nav>
