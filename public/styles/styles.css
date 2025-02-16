@@ -104,6 +104,7 @@ body.reptiles {
 
 .main_content {
     flex: 0 0 75%;
+    flex: 0 0 75%;
     color: #fff;
 }
 
@@ -116,7 +117,7 @@ h2 {
     margin: 5px;
     width: 150px;
     list-style-type: none;
-    font-size: 1.2remrem;
+    font-size: 1.2rem;
 }
 
 .animal {
@@ -306,11 +307,9 @@ p {
 
     .main_content {
        margin: 8px;
+       margin: 8px;
     }
 
-    .container {
-        display: inline-block;
-    }
 }
 
 @media screen and (max-width:742px) {

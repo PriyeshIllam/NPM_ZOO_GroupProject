@@ -7,7 +7,6 @@ import * as path from "path";
 
 const app = express ();
 const __dirname = path.resolve();
-
 app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"public")));
 app.set("view engine","ejs");
@@ -24,13 +23,12 @@ app.get('/animal/:name', (req, res) => {
         const animalName = req.params.name; //access route parameters
         let animal;
     
-        for (let i = 0; i < allAnimals.length; i++) {
-            if (allAnimals[i].name === animalName) {
-                animal = allAnimals[i];
-                break; 
-            }
+    for (let i = 0; i < allAnimals.length; i++) {
+        if (allAnimals[i].name === animalName) {
+            animal = allAnimals[i];
+            break; 
         }
-        
+    }
 
     if (animal) {
         res.render('pages/animal.ejs', {animal});
@@ -39,9 +37,9 @@ app.get('/animal/:name', (req, res) => {
     }
 });
 
-app.use("/mammals",mammalsRouter)
-app.use("/reptiles",reptilesRouter)
-app.use("/birds",birdsRouter)
+app.use("/mammals",mammalsRouter);
+app.use("/reptiles",reptilesRouter);
+app.use("/birds",birdsRouter);
 
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
