@@ -1,6 +1,7 @@
 import express from "express";
 import { mammals,mammalsContent } from "../data/animal.js";
 
+
 const mammalsRouter = express.Router();
 
 mammalsRouter.get("/",(req,res) => {
