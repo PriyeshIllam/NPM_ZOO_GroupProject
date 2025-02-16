@@ -1,10 +1,10 @@
 <%- include("../partials/head.ejs")  %>
-<body>
+<body class="reptiles">
     <%- include("../partials/header.ejs")  %>
-    
+    <%- include("../partials/navigation.ejs", {reptiles: 'active'})  %>
 
     <div class="container">
-        <%- include("../partials/sidebar", { allAnimals: reptiles }) %>
+        <%- include("../partials/sidebar", { animals: reptiles }) %>
         <div class="main_content">
             <h2>Reptiles</h2>
             <p>Reptiles are a diverse class of vertebrates that include snakes, lizards, turtles, and crocodilians. They are primarily characterized by their dry, scaly skin, which provides protection and minimizes water loss. Most reptiles are ectothermic, relying on external heat sources to regulate their body temperature. Reproduction varies among species; while many lay eggs, some, like certain species of boas, give birth to live young. Unlike amphibians, reptiles breathe exclusively through lungs and do not possess gills at any stage of their life cycle. </p>

@@ -7,7 +7,7 @@ const router = express.Router();
 const reptiles = allAnimals.filter(animal => animal.type.toLowerCase() === 'reptile');
 
 router.get('/', (req, res) => {
-    res.render('pages/reptiles', {allAnimals, reptiles,
+    res.render('pages/home', {allAnimals, reptiles,
       title : "Reptiles Page",
     }); // Pass both variables
 });
