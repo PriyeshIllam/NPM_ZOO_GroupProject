@@ -18,6 +18,12 @@ body {
     background-position: center;
 }
 
+body.reptiles {
+    background-image: url("/images/reptiles.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .header {
     display: flex;
     justify-content: center;
