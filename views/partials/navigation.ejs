@@ -1,6 +1,28 @@
 <nav class="nav_menu">
-    <a href="/" class="active" >Home</a>
-    <a href="/mammals">Mammals</a>
-    <a href="/birds">Birds</a>
-    <a href="/reptiles">Reptiles</a>
+   <% if(locals.bodyClass) { %>
+        <% if(bodyClass === "home") { %>
+            <a href="/" class="active">Home</a>
+        <% } else { %>
+            <a href="/">Home</a>
+        <% } %>
+          
+        <% if (bodyClass === "mammals") { %>
+            <a href="/mammals" class="active">Mammals</a>
+        <% } else { %>
+            <a href="/mammals">mammals</a>
+        <% } %>
+            
+        <%  if (bodyClass === "birds") { %>
+            <a href="/birds" class="active">birds</a>
+        <% }  else { %>
+            <a href="/birds">birds</a>
+        <% } %>
+        
+        <% if (bodyClass === "reptiles") { %>
+            <a href="/reptiles" class="active">Reptiles</a>
+        <% }else { %>
+            <a href="/reptiles">reptiles</a>
+        <% } %>
+  <% } %> 
+    
 </nav>
