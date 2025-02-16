@@ -1,23 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
 <%- include("../partials/head.ejs")  %>
 <body>
     <%- include("../partials/header.ejs")  %>
-    <%- include("../partials/navigation.ejs")  %>
-    <div class="container">
-    <h1>Birds of the World</h1>
-    <ul>
-        <% birds.forEach(bird => { %>
-            <li>
-                <h2><%= bird.name %></h2>
-                <a href="/animal/<%= bird.name %>">Learn more <%= bird.name %></a>
-            </li>
-        <% }) %>
-    </ul>
-    <%- include("../partials/maincontent.ejs") %>
-    </div>
-        <%- include("../partials/footer.ejs")  %>
+    
 
-   
-</body>
-</html>
+    <div class="container">
+        <%- include("../partials/sidebar", { allAnimals: birds }) %>
+        <div class="main_content">
+            <h2>Birds</h2>
+            <p>Birds are a group of warm-blooded vertebrates constituting the class Aves (Latin: [ˈaveːs]), characterised by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton. Birds live worldwide and range in size from the 5.5 cm (2.2 in) bee hummingbird to the 2.8 m (9 ft 2 in) common ostrich. There are over 11,000 living species and they are split into 44 orders. More than half are passerine or "perching" birds. Birds have wings whose development varies according to species; the only known groups without wings are the extinct moa and elephant birds. Wings, which are modified forelimbs, gave birds the ability to fly, although further evolution has led to the loss of flight in some birds, including ratites, penguins, and diverse endemic island species.</p>
+
+            <p>The digestive and respiratory systems of birds are also uniquely adapted for flight. Some bird species of aquatic environments, particularly seabirds and some waterbirds, have further evolved for swimming. The study of birds is called ornithology.</p>
+             </div>
+        </div>
+        <%- include("../partials/footer.ejs")  %>
+            </body>
+            
+            </html>
