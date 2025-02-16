@@ -1,10 +1,15 @@
 import express from "express";
+import { mammals,mammalsContent } from "../data/animal.js";
 
 
 const mammalsRouter = express.Router();
 
 mammalsRouter.get("/",(req,res) => {
-   res.send("Welcome to MammalsPage")
+   res.render("pages/home",{
+      animals : mammals,
+      content : mammalsContent,
+      bodyClass : "mammals"
+   })
  })
 
 mammalsRouter.get("/echidna",(req,res) => {

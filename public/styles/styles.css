@@ -9,19 +9,32 @@ html {
 
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    background-image: url("/images/home_bg.jpg");
+    flex-direction: column; 
+}
+
+body.home {
+    background-image: url("/images/deer.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+}
+
+body.mammals {
+    background-image: url("/images/t1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.birds {
+    background-image: url("/images/bird2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header {
     display: flex;
     justify-content: center;
-    background-color: #7d9180;
 }
 
 .logo {
@@ -79,13 +92,12 @@ body {
 }
 
 .sidebar {
-    flex: 0 0 30%;
+    flex: 0 0 25%;
     color: white;
-    border-right: 1px solid gray;
 }
 
 .main_content {
-    flex: 0 0 70%;
+    flex: 0 0 75%;
     color: #fff;
 }
 
@@ -96,13 +108,28 @@ h2 {
 .sidebar ul li {
     padding: 10px;
     margin: 5px;
+    width: 150px;
     list-style-type: none;
-    font-size: 1.5rem;
+    font-size: 1.2remrem;
 }
 
 .animal {
     text-decoration: none;
     color: #e9b118;
+}
+
+.content {
+    margin: 8px;
+}
+
+.content h3 {
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+.details {
+    text-indent: 30px;
+    font-size: 16px;
 }
 
 /*animal.ejs css*/
@@ -244,6 +271,18 @@ p {
     color: wheat;
 }
 
+@media screen and (max-width : 800px) {
+    body {
+        background-color: #433f33;
+    }
+
+    body.home,
+    body.mammals,
+    body.birds,
+    body.reptiles {
+        background-image: none;
+    }
+}
 
 @media screen and (max-width : 768px) {
 
@@ -260,20 +299,15 @@ p {
     }
 
     .main_content {
-        display: flex;
-        flex: content;
+       margin: 8px;
     }
 
     .container {
         display: inline-block;
     }
-
 }
 
 @media screen and (max-width:742px) {
-    body {
-        background-color: #e9b118;
-    }
 
     .animal_body {
         background-image: none;
@@ -283,7 +317,10 @@ p {
         height: auto;
         width: 50%;
     }
-
+  
+    .animal {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width:568px) {
@@ -291,4 +328,3 @@ p {
         display:block;
     }
 }
-
