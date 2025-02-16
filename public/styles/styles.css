@@ -69,15 +69,16 @@ body.reptiles {
 .nav_menu {
     display: flex;
     justify-content: space-around;
+    margin: 8px;
     padding: 24px;
-    border-bottom: 1px solid gray;
 }
 
 .nav_menu a {
+    margin: 8px;
     text-decoration: none;
     font-size: 1.4rem;
     color: #e9b118;
-    padding: 7px;
+    padding: 16px;
 }
 
 .active {
@@ -138,9 +139,6 @@ h2 {
     text-indent: 30px;
     font-size: 16px;
 }
-
-
-
 
 /*animal.ejs css*/
 .animal_body {
