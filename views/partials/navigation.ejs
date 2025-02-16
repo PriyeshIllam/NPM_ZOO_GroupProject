@@ -1,6 +1,23 @@
 <nav class="nav_menu">
-    <a href="/" class="active" >Home</a>
-    <a href="/mammals">Mammals</a>
-    <a href="/birds">Birds</a>
-    <a href="/reptiles">Reptiles</a>
+    <% if(typeof home!== 'undefined'){ %>
+        <a href="/" class="active">Home</a>
+    <%} else { %>
+        <a href="/" >Home</a>
+    <% } %>"
+    <% if(typeof mammals!== 'undefined'){ %>
+        <a href="/mammals" class="active">Mammals</a>
+    <%} else { %>
+        <a href="/mammals" >Mammals</a>
+    <% } %>"
+    <% if(typeof birds!== 'undefined'){ %>
+        <a href="/birds" class="active">Birds</a>
+    <%} else { %>
+        <a href="/birds" >Birds</a>
+    <% } %>"
+    <% if(typeof reptiles!== 'undefined'){ %>
+        <a href="/reptiles" class="active">Reptiles</a>
+    <%} else { %>
+        <a href="/reptiles" >Reptiles</a>
+    <% } %>"
+    
 </nav>

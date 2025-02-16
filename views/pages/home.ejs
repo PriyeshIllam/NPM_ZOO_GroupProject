@@ -3,7 +3,7 @@
 <%- include("../partials/head.ejs")  %>
 <body class="<%= bodyClass %>">
     <%- include("../partials/header.ejs")  %>
-    <%- include("../partials/navigation.ejs")  %>
+    <%- include("../partials/navigation.ejs", {home: 'active'})  %>
     <div class="container">
         <%- include("../partials/sidebar.ejs")  %>
         <%- include("../partials/maincontent.ejs")  %>
