@@ -200,7 +200,6 @@ p {
 }
 
 .footer {
-    background-color: #7d9180;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -209,7 +208,8 @@ p {
     padding: 24px;
     gap: 36px;
     align-items: center;
-    text-align: center;   
+    text-align: center; 
+    color: whitesmoke;  
 }
 
 .footer_social-media a {
@@ -236,7 +236,7 @@ p {
 
 .footer-logo ul a {
     text-decoration: none;
-    color: black;
+    color: whitesmoke;
 }
 
 .footer_social-media h4 {
@@ -264,7 +264,7 @@ p {
 }
 
 .facts ul a {
-    color: black;
+    color: whitesmoke;
     font-size: 1rem;
     font-style: normal; 
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
