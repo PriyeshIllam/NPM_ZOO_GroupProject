@@ -1,12 +1,15 @@
 import express from "express";
-import { mammals } from "../data/animal.js";
+import { mammals,mammalsContent } from "../data/animal.js";
 
 const mammalsRouter = express.Router();
 
-mammalsRouter.get('/', (req, res) => {
-    res.render('pages/home.ejs', {
-      animals: mammals});
-});
+mammalsRouter.get("/",(req,res) => {
+   res.render("pages/home",{
+      animals : mammals,
+      content : mammalsContent,
+      bodyClass : "mammals"
+   })
+ })
 
 mammalsRouter.get('/animal/:name', (req, res) => {
     const animalName = req.params.name; //access route parameters

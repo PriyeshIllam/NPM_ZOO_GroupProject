@@ -1,5 +1,5 @@
 import express from 'express';
-import { allAnimals } from '../data/animal.js'; // Ensure correct path
+import {allAnimals} from '../data/animal.js'; // Ensure correct path
 
 const router = express.Router();
 
