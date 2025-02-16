@@ -107,3 +107,4 @@ let birdsContent = [
 const allAnimals = [...mammals, ...birds, ...reptiles]; //spread operator
 
 export {allAnimals,mammals,birds,homeContent,mammalsContent,birdsContent};
+

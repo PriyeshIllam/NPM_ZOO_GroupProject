@@ -17,8 +17,7 @@ app.get('/', (req, res) => {
         animals : allAnimals, //display all animals in sidebar
         content : homeContent, //maincontent
         bodyClass : "home"
-    })
-                         
+    })                       
 });
 
 app.get('/animal/:name', (req, res) => {
@@ -47,5 +46,4 @@ app.use("/birds",birdsRouter)
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 });
-
 
