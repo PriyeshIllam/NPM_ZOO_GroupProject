@@ -9,19 +9,44 @@ html {
 
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+}
+
+body.home {
     background-image: url("/images/home_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+}
+
+body.mammals {
+    background-image: url("/images/t1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.birds {
+    background-image: url("/images/bird2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.mammals {
+    background-image: url("/images/t1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.birds {
+    background-image: url("/images/bird2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header {
     display: flex;
     justify-content: center;
-    background-color: #7d9180;
 }
 
 .logo {

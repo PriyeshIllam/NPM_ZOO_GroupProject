@@ -1,3 +1,9 @@
 <div class="main_content">
-    <h2>Click on an animal name to see its details</h2>
+        <% content.forEach(content=> { %>
+            <div class="content">
+                <h3><%= content.subHeading  %></h3>
+                <p class="details"><%= content.maincontent  %></p>
+            </div>
+        <% }); %>
+   
 </div>
