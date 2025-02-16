@@ -33,7 +33,7 @@ body.birds {
 }
 
 body.reptiles {
-    background-image: url("/images/reptiles.jpg");
+    background-image: url("/images/snake.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
