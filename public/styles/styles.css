@@ -104,6 +104,7 @@ body.reptiles {
 
 .main_content {
     flex: 0 0 75%;
+    flex: 0 0 75%;
     color: #fff;
 }
 
@@ -309,6 +310,7 @@ p {
     }
 
     .main_content {
+       margin: 8px;
        margin: 8px;
     }
 
