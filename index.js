@@ -22,8 +22,7 @@ app.get('/', (req, res) => {
         animals : allAnimals, //display all animals in sidebar
         content : homeContent, //maincontent
         bodyClass : "home"
-    })
-                         
+    })                       
 });
 
 app.get('/animal/:name', (req, res) => {
