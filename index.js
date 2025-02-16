@@ -12,11 +12,6 @@ app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"public")));
 app.set("view engine","ejs");
 
-//import {allAnimals} from './data/animal.js';
-//import mammalsRouter from './routes/mammalRouter.js';
-//import birds from './routes/birds.js';
-//import reptilesRouter from './routes/reptilesRouter.js';
-
 app.get('/', (req, res) => {
     res.render("pages/home",{
         animals : allAnimals, //display all animals in sidebar
