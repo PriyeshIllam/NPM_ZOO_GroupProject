@@ -3,16 +3,17 @@ import mammalsRouter from './routes/mammalRouter.js';
 import birdsRouter from './routes/birdsRouter.js'
 import {allAnimals,homeContent} from './data/animal.js';
 import reptilesRouter from './routes/reptilesRouter.js';
-
+import * as dotenv from "dotenv";
 import * as path from "path";
+
+dotenv.config();
+const PORT = process.env.PORT;
 
 const app = express ();
 const __dirname = path.resolve();
 app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"public")));
 app.set("view engine","ejs");
-
-
 
 app.get('/', (req, res) => {
     res.render("pages/home",{
@@ -44,6 +45,6 @@ app.use("/mammals",mammalsRouter);
 app.use("/reptiles",reptilesRouter);
 app.use("/birds",birdsRouter);
 
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
+app.listen(PORT, () => {
+    console.log(`Listening on PORT : ${PORT}`);
 });
