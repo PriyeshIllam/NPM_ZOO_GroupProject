@@ -43,6 +43,25 @@ let birds = [
         "SE Austalia", "../images/yellowtailedblackcockatoo.jpg")
 ];
 
+let reptilesContent = [
+    new Content("Reptiles at Nature’s Zoo 🦎🐍🐢",
+                "Reptiles have roamed the Earth for millions of years, adapting to extreme environments and developing incredible survival skills. At Nature’s Zoo, you can witness some of the most powerful, unique, and rare reptiles, from giant lizards to majestic sea turtles!"
+    ),
+
+    new Content("🦎 Perentie – Australia’s Largest Monitor Lizard",
+                "The Perentie is Australia’s biggest lizard, growing up to 2.5 meters (8 feet) long! These fast and intelligent reptiles use their long forked tongues to detect prey from far away. Watch as they climb, dig, and hunt in their habitat."
+    ),
+
+    new Content("🦖 Frill-Necked Lizard – The Fearless Defender",
+                "One of the most unique reptiles, the frill-necked lizard is famous for its large, fan-like frill that flares out when it feels threatened. These quick lizards can even run on two legs, making them look like tiny dinosaurs in action!"
+    ),
+
+    new Content("🐢 Hawksbill Turtle – The Ocean Wanderer",
+                "The Hawksbill Turtle is one of the most beautiful and critically endangered sea turtles. Recognized by its narrow beak and stunning patterned shell, this turtle plays a crucial role in maintaining coral reef health by eating sponges. Watch these graceful swimmers glide effortlessly through the water in our aquatic habitat!"
+    ),
+
+]
+
 function Content (subHeading,maincontent){
     this.subHeading = subHeading,
     this.maincontent = maincontent
@@ -106,5 +125,5 @@ let birdsContent = [
 
 const allAnimals = [...mammals, ...birds, ...reptiles]; //spread operator
 
-export {allAnimals,mammals,birds,homeContent,mammalsContent,birdsContent};
+export {allAnimals,mammals,birds,reptiles, homeContent,mammalsContent,birdsContent, reptilesContent};
 
