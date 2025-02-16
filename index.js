@@ -40,10 +40,10 @@ app.get('/animal/:name', (req, res) => {
     }
 });
 
-
-app.use("/mammals",mammalsRouter)
-app.use("/reptiles",reptilesRouter)
+app.use("/mammals",mammalsRouter);
+app.use("/reptiles",reptilesRouter);
 app.use("/birds",birdsRouter);
+
 app.listen(3000, () => {
     console.log('Server is running on http://localhost:3000');
 });
