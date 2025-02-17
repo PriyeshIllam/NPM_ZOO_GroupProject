@@ -7,10 +7,10 @@ import * as dotenv from "dotenv";
 import * as path from "path";
 
 dotenv.config();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT; //looks for port in env(hidden files for security)
 
 const app = express ();
-const __dirname = path.resolve();
+const __dirname = path.resolve(); //dynamic variable
 app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"public")));
 app.set("view engine","ejs");
@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/animal/:name', (req, res) => {
-    const animalName = req.params.name; //access route parameters
+    const animalName = req.params.name; //access the animal name from the request object and stores it in a variable (animalName)
         let animal;
     
     for (let i = 0; i < allAnimals.length; i++) {
