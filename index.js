@@ -3,11 +3,12 @@ import mammalsRouter from './routes/mammalRouter.js';
 import birdsRouter from './routes/birdsRouter.js'
 import {allAnimals,homeContent} from './data/animal.js';
 import reptilesRouter from './routes/reptilesRouter.js';
-//import * as dotenv from "dotenv";
+import * as dotenv from "dotenv";
 import * as path from "path";
 
-//dotenv.config();
-const PORT = 3000;
+//npm - node package manager
+dotenv.config();
+const PORT = process.env.PORT; //looks for port in env(hidden files for security)
 
 const app = express ();
 const __dirname = path.resolve();
