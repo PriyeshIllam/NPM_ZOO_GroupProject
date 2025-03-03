@@ -6,8 +6,9 @@ import reptilesRouter from './routes/reptilesRouter.js';
 import * as dotenv from "dotenv";
 import * as path from "path";
 
+//npm - node package manager
 dotenv.config();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT; //looks for port in env(hidden files for security)
 
 const app = express ();
 const __dirname = path.resolve();
