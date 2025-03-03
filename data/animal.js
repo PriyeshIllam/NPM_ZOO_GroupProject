@@ -1,3 +1,4 @@
+
 function Animal(type, name, length, weight, lifespan, food, description, found, image) {
     this.type = type; // Added type to distinguish between all animals
     this.name = name;
